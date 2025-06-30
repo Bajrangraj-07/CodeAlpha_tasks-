@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1 class="title">Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('architecture')">Architecture</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery">
+    <img src="https://source.unsplash.com/300x200/?nature,forest" class="nature" alt="Nature" onclick="openLightbox(this)">
+    <img src="https://source.unsplash.com/300x200/?architecture,building" class="architecture" alt="Architecture" onclick="openLightbox(this)">
+    <img src="https://source.unsplash.com/300x200/?nature,river" class="nature" alt="Nature" onclick="openLightbox(this)">
+    <img src="https://source.unsplash.com/300x200/?architecture,monument" class="architecture" alt="Architecture" onclick="openLightbox(this)">
+    <img src="https://source.unsplash.com/300x200/?nature,mountain" class="nature" alt="Nature" onclick="openLightbox(this)">
+  </div>
+
+  <!-- Lightbox View -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
